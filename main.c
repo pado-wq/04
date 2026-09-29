@@ -1,21 +1,16 @@
 #include <stdio.h>
 
-int main(void) {
-    int x, y;
+int main(void)
+{
+    int total, minutes, seconds;
 
-    printf("정수 두 개 입력: ");
-    scanf("%d %d", &x, &y);
+    printf("Enter seconds: ");
+    scanf("%d", &total);
 
-    if (y == 0) {
-        printf("0으로는 나누거나 나머지를 구할 수 없습니다.\n");
-        return 1;
-    }
+    minutes = total / 60;
+    seconds = total % 60;
 
-    printf("+ result is %d\n", x + y);
-    printf("- result is %d\n", x - y);
-    printf("* result is %d\n", x * y);
-    printf("/ result is %d\n", x / y);
-    printf("%% result is %d\n", x % y);
+    printf("%d:%02d\n", minutes, seconds);
 
     return 0;
 }
