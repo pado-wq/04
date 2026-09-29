@@ -1,18 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-    unsigned int x;
-    int count;
+    int total, hours, minutes, seconds;
 
-    printf("숫자 입력: ");
-    scanf("%u", &x);
+    printf("초 입력: ");
+    scanf("%d", &total);
 
-    for (count = 0; x != 0; x >>= 1) {
-        if (x & 1) {
-            count++;
-        }
-    }
+    hours = total / 3600;
+    minutes = (total % 3600) / 60;
+    seconds = total % 60;
 
-    printf("The result is : %d\n", count);
+    printf("%d : %02d : %02d\n", hours, minutes, seconds);
     return 0;
 }
