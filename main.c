@@ -1,13 +1,21 @@
 #include <stdio.h>
 
 int main(void) {
-    int x = 2, z = 1;
-    int a = 3, b = 4, c = 5;
-    int y, m;
+    int x, y;
 
-    y = a * x * x + b * x + c;
-    m = (x + y + z) / 3;
+    printf("정수 두 개 입력: ");
+    scanf("%d %d", &x, &y);
 
-    printf("y=%d, m=%d\n", y, m);
+    if (y == 0) {
+        printf("0으로는 나누거나 나머지를 구할 수 없습니다.\n");
+        return 1;
+    }
+
+    printf("+ result is %d\n", x + y);
+    printf("- result is %d\n", x - y);
+    printf("* result is %d\n", x * y);
+    printf("/ result is %d\n", x / y);
+    printf("%% result is %d\n", x % y);
+
     return 0;
 }
