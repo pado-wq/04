@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int total, minutes, seconds;
+int main(void) {
+    int year, leap;
 
-    printf("Enter seconds: ");
-    scanf("%d", &total);
+    printf("연도 입력: ");
+    scanf("%d", &year);
 
-    minutes = total / 60;
-    seconds = total % 60;
+    leap = (year % 4 == 0 && year % 100 != 0)
+           || (year % 400 == 0);
 
-    printf("%d:%02d\n", minutes, seconds);
-
+    printf("%d\n", leap);
     return 0;
 }
